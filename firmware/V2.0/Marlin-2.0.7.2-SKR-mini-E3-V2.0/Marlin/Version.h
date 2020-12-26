@@ -41,7 +41,7 @@
  * here we define this default string as the date where the latest release
  * version was tagged.
  */
-//#define STRING_DISTRIBUTION_DATE "2020-07-09"
+#define STRING_DISTRIBUTION_DATE __DATE__
 
 /**
  * Defines a generic printer name to be output to the LCD after booting Marlin.
@@ -65,7 +65,8 @@
  * The WEBSITE_URL is the location where users can get more information such as
  * documentation about a specific Marlin release.
  */
-//#define WEBSITE_URL "https://marlinfw.org"
+// Ugly hack.
+#define WEBSITE_URL __DATE__
 
 /**
  * Set the vendor info the serial USB interface, if changable
