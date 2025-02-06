@@ -35,5 +35,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: firmware
-        path: .pio/build/STM32F103RC_btt_512K/firmware.bin
+        path: .pio/build/STM32F103RC_btt/firmware.bin
 
