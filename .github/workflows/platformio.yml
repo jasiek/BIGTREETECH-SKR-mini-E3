@@ -10,14 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Cache pip
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
     - name: Cache PlatformIO
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.platformio
         key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
@@ -35,5 +35,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: firmware
-        path: .pio/build/STM32F103RC_btt/firmware.bin
+        path: firmware/V2.0/Marlin-2.0.7.2-SKR-mini-E3-V2.0/.pio/build/STM32F103RC_btt/firmware.bin
 
